@@ -39,4 +39,19 @@ public class User {
 
     @CreationTimestamp  // 시간자동입력
     private Timestamp createDate;
+
+    private String provider;
+
+    private String providerId;
+
+    @Builder
+    public User(String username, String password, String email, RoleType role, Timestamp createDate, String provider, String providerId) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+        this.createDate = createDate;
+        this.provider = provider;
+        this.providerId = providerId;
+    }
 }

@@ -10,7 +10,7 @@
                 <c:if test="${not empty info.imageUrl}">
                     <a href="${info.link}" target="_blank">
                         <img src="${info.imageUrl}" claa="img-thumbnail"
-                            style="border: 1px solid #333333;
+                             style="border: 1px solid #333333;
                             height: auto;
                             line-height: 100%;
                             outline: none;
@@ -22,10 +22,10 @@
                 </c:if>
 
                 <a class="article-headline" target="_blank" style="color:#0099CC; text-decoration: none; font-weight: bold;" href="${info.link}">
-                    ${info.title}
+                        ${info.title}
                 </a>
                 <p style="margin:0; line-height: 1.5em; font-size: 12px;">
-                    ${info.content}
+                        ${info.content}
                 </p>
             </div>
 

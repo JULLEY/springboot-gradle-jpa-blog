@@ -4,18 +4,30 @@ import leo.programming.model.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
 // 스프링 시큐리티가 로그인 요청을 가로채서 로그인을 진행하고 완료가 되면 UserDetails 타입의 오브젝트를
 // 스프링 시큐리티의 고유한 세션저장소에 저장을 해준다.
 @Getter
-public class PrincipalDetail implements UserDetails {
+public class PrincipalDetail implements UserDetails, OAuth2User {
+
     private User user;  // 콤포지션(extends와 다름)
 
+    private Map<String,Object> attributes;
+
+    // 일반 로그인 사용
     public PrincipalDetail(User user){
         this.user = user;
+    }
+
+    // OAuth 로그인 사용
+    public PrincipalDetail(User user, Map<String,Object> attributes){
+        this.user = user;
+        this.attributes = attributes;
     }
 
     @Override
@@ -68,5 +80,15 @@ public class PrincipalDetail implements UserDetails {
         collectors.add(() -> {return "ROLE_"+user.getRole();});
 
         return collectors;
+    }
+
+    @Override
+    public Map<String, Object> getAttributes() {
+        return attributes;
+    }
+
+    @Override
+    public String getName() {
+        return null;
     }
 }
