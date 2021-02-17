@@ -42,22 +42,22 @@ spring:
       client:
         registration:
           google: # /oauth2/authorization/google 이 주소를 동작하게 한다.
-            client-id: 568471482619-re2ks60p60t8pj5asgn4d90m5im5sce1.apps.googleusercontent.com
-            client-secret: 6NNst1jydVspP7DMNibSCQ9M
+            client-id:
+            client-secret:
             scope:
             - email
             - profile
 
           facebook:
-            client-id: 454075076005953
-            client-secret: e5cb6f9070dad62eabd6caf895a95691
+            client-id:
+            client-secret:
             scope:
             - email
             - public_profile
 
           naver:
-            client-id: cItMaqGqiRdiwtQ5eu6c
-            client-secret: fEBU0X8N9B
+            client-id:
+            client-secret:
             scope:
             - name
             - email
