@@ -46,7 +46,7 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
             System.out.println("네이버 로그인 요청");
             oauth2UserInfo = new NaverUserInfo((Map<String, Object>) oAuth2User.getAttributes().get("response"));
         }else{
-            System.out.println("망함");
+            System.out.println("로그인 요청 경로를 찾을 수 없음");
         }
         Optional<User> userOptional =
                 userRepository.findByProviderAndProviderId(oauth2UserInfo.getProvider(), oauth2UserInfo.getProviderId());
