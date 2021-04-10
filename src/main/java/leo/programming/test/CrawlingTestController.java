@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.io.IOException;
 
+/**
+ * 크롤링 테스트용
+ */
 @Controller
 @AllArgsConstructor
 public class CrawlingTestController {
