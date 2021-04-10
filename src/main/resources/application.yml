@@ -41,7 +41,7 @@ spring:
     oauth2:
       client:
         registration:
-          google: # /oauth2/authorization/google 이 주소를 동작하게 한다.
+          google: # /oauth2/authorization/google 이 주소를 동작하게 한다
             client-id: 568471482619-re2ks60p60t8pj5asgn4d90m5im5sce1.apps.googleusercontent.com
             client-secret: 6NNst1jydVspP7DMNibSCQ9M
             scope:
