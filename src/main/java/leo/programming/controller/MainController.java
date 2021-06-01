@@ -19,7 +19,7 @@ import java.util.List;
 public class MainController {
 
     /**
-     * 메인, IT 기사
+     * 메인 접근 && IT 기사 크롤링
      * @param model
      * @param pageable
      * @return
